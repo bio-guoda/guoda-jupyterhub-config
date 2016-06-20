@@ -1,0 +1,6 @@
+
+# the command(s) the Hub can run on behalf of the above users without needing a password
+# the exact path may differ, depending on how sudospawner was installed
+Cmnd_Alias JUPYTER_CMD = /usr/local/bin/sudospawner
+
+jupyterhub ALL=(%jupyterhub) NOPASSWD:JUPYTER_CMD

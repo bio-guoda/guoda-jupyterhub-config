@@ -1,0 +1,12 @@
+[Unit]
+Description=Jupyterhub
+After=network.target
+
+[Service]
+User=jupyterhub
+ExecStart=/usr/local/bin/jupyterhub -f /etc/jupyterhub_config.py --no-ssl
+WorkingDirectory=/var/lib/jupyterhub
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
