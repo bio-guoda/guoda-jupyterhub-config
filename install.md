@@ -14,7 +14,9 @@
     adduser --system --group --home /var/lib/jupyterhub --disabled-login jupyterhub
     # Allow the user to authenticate other users
     adduser jupyterhub shadow
-    cp $BASE/etc/sudoers.d/jupyterhub /etc/sudoers.d/jupyterhub
+    adduser jupyterhub ssl-cert
+    adduser jupyterhub utmp
+    cp $BASE/etc/sudoeqrs.d/jupyterhub /etc/sudoers.d/jupyterhub
     ln -s $BASE/etc/jupyterhub_config.py /etc/
     ln -s $BASE/etc/systemd/system/jupyterhub.service /etc/systemd/system/
     systemctl daemon-reload

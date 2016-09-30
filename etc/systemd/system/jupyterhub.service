@@ -1,6 +1,7 @@
 [Unit]
 Description=Jupyterhub
 After=network.target
+Documentation=https://github.com/jupyterhub/jupyterhub
 
 [Service]
 User=jupyterhub
