@@ -1,0 +1,17 @@
+{
+ "display_name": "PySpark (py3)",
+ "language": "python",
+ "argv": [
+  "/usr/bin/python3",
+  "-m",
+  "ipykernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "env": {
+  "SPARK_HOME": "/opt/spark/latest/",
+  "PYTHONPATH": "/opt/spark/latest/python/:/opt/spark/latest/python/lib/py4j-0.10.1-src.zip",
+  "PYTHONSTARTUP": "/opt/spark/latest/python/pyspark/shell.py",
+  "PYSPARK_SUBMIT_ARGS": "--master mesos://mesos01.acis.ufl.edu:5050 pyspark-shell"
+ }
+}

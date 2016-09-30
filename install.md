@@ -44,3 +44,9 @@ From in a virtualenv
 
     pip install ipykernel
     ipython kernel install --user --name $NAME --display-name
+
+### Spark kernels
+
+* https://arnesund.com/2015/09/21/spark-cluster-on-openstack-with-multi-user-jupyter-notebook/
+* https://github.com/ibm-et/spark-kernel/wiki/Getting-Started-with-the-Spark-Kernel
+  * this points out that we should probably be setting the ENV: `"SPARK_CONFIGURATION": "spark.cores.max=4",`
