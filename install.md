@@ -10,6 +10,9 @@
 
 ## System configuraton
 
+    salt-call state.sls spark
+    salt-call state.sls hadoop
+
     BASE=/opt/guoda-jupyterhub-conf
     adduser --system --group --home /var/lib/jupyterhub --disabled-login jupyterhub
     # Allow the user to authenticate other users
@@ -19,12 +22,9 @@
     cp $BASE/etc/sudoeqrs.d/jupyterhub /etc/sudoers.d/jupyterhub
     ln -s $BASE/etc/jupyterhub_config.py /etc/
     ln -s $BASE/etc/systemd/system/jupyterhub.service /etc/systemd/system/
+    ln -s $BASE/usr/local/share/jupyter/kernels/* /usr/local/share/jupyter/kernels/
     systemctl daemon-reload
 
-
-## Spark configuration
-
-    salt-call state.sls spark saltenv=prod
 
 # Other Notes
 
@@ -33,7 +33,6 @@
 
     adduser --gecos "" $USERNAME
     adduser $USERNAME jupyterhub
-
 
 
 ## Registering new kernels
