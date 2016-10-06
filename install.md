@@ -26,6 +26,11 @@
     systemctl daemon-reload
 
 
+## Github oauth config
+
+Setup according to https://github.com/jupyterhub/oauthenticator#github-setup
+
+
 # Other Notes
 
 ## Adding users to the system

@@ -5,10 +5,12 @@ Documentation=https://github.com/jupyterhub/jupyterhub
 
 [Service]
 User=jupyterhub
+EnvironmentFile=/etc/jupyterhub-oauth
 WorkingDirectory=/var/lib/jupyterhub
 PrivateTmp=true
-PrivateDevices=yes
-ProtectSystem=full
+PrivateDevices=true
+ProtectSystem=true
+
 #CapabilityBoundingSet=CAP_NET_BIND_SERVICE CAP_AUDIT_WRITE CAP_SETGID CAP_SETUID
 ExecStart=/usr/local/bin/jupyterhub -f /etc/jupyterhub_config.py
 ExecReload=/bin/kill -HUP $MAINPID
