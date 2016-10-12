@@ -12,6 +12,7 @@
 
     salt-call state.sls spark
     salt-call state.sls hadoop
+    systemctl mask mesos-master.service
 
     BASE=/opt/guoda-jupyterhub-conf
     adduser --system --group --home /var/lib/jupyterhub --disabled-login jupyterhub
