@@ -30,14 +30,14 @@
 
 Setup according to https://github.com/jupyterhub/oauthenticator#github-setup
 
+I've configured it to make a new user on the system whenever someone
+authenticates so that the notebooks will be run with local user
+permissions.
+
+`./Examples` is copied to `/etc/skel/` so that they will see the Examples folder on logging in
+
 
 # Other Notes
-
-## Adding users to the system
-
-
-    adduser --gecos "" $USERNAME
-    adduser $USERNAME jupyterhub
 
 
 ## Registering new kernels
