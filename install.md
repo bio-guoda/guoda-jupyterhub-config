@@ -3,10 +3,12 @@
 ## Initial package installation
 
     apt install npm nodejs nodejs-legacy pkg-config python2.7-dev python3.5-dev
+    apt install r-base libatlas3-base --no-install-recommends
     npm install -g configurable-http-proxy
     pip3 install jupyter jupyterhub sudospawner notebook matplotlib numpy pandas idigbio
     pip2 install matplotlib numpy ipykernel pandas idigbio
     ipython2 kernel install --name="Python 2" --display-name="Python 2"
+
 
 ## System configuraton
 
@@ -54,4 +56,7 @@ From in a virtualenv
 
 * https://arnesund.com/2015/09/21/spark-cluster-on-openstack-with-multi-user-jupyter-notebook/
 * https://github.com/ibm-et/spark-kernel/wiki/Getting-Started-with-the-Spark-Kernel
-  * this points out that we should probably be setting the ENV: `"SPARK_CONFIGURATION": "spark.cores.max=4",`
+
+### R kernel
+
+https://github.com/IRkernel/IRkernel#installation

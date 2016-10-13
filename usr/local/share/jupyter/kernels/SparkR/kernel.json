@@ -1,0 +1,15 @@
+{
+  "argv": ["/opt/spark/latest/bin/sparkR",
+           "--master", "mesos://mesos01.acis.ufl.edu:5050",
+           "--slave",
+           "-e", "IRkernel::main()",
+           "--args", "{connection_file}"
+          ],
+  "display_name": "SparkR (experimental)",
+  "language": "R",
+  "env": {
+    "SPARK_HOME": "/opt/spark/latest/",
+    "HADOOP_CONF_DIR": "/etc/hadoop/conf",
+    "HADOOP_USER_NAME": "hdfs"
+  }
+}

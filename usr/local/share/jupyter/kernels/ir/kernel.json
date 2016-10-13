@@ -1,0 +1,11 @@
+{
+  "argv": ["/usr/lib/R/bin/R", "--slave", "-e", "IRkernel::main()", "--args", "{connection_file}"],
+  "display_name": "R",
+  "language": "R",
+  "env": {
+    "SPARK_HOME": "/opt/spark/latest/",
+    "HADOOP_CONF_DIR": "/etc/hadoop/conf",
+    "HADOOP_USER_NAME": "hdfs"
+  }
+
+}
